@@ -46,6 +46,11 @@
              /* Stronger background for timing blocks */
             background-color: rgba(212, 19, 103, 0.2); 
         }
+        /* Custom styles for clickable location card to give visual feedback */
+        .location-link:hover {
+            color: var(--rotaract-cranberry);
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -87,7 +92,7 @@
                 </div>
                 <div class="p-6 bg-blue-50 rounded-lg shadow-md">
                     <p class="text-lg font-semibold text-rotaract-blue">活動結束</p>
-                    <p class="text-3xl font-extrabold text-gray-900 mt-1">20:40</p>
+                    <p class="text-3xl font-extrabold text-gray-900 mt-1">20:30</p>
                 </div>
             </div>
         </div>
@@ -99,29 +104,34 @@
             <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">地點與服裝資訊</h3>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Location Card -->
+                <!-- Location Card - Updated with Google Maps link -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-rotaract-blue">
                     <h4 class="text-xl font-bold mb-3 text-rotaract-blue">活動地點</h4>
-                    <p class="text-lg font-medium text-gray-700 mb-2">綠水市民活動中心一樓禮堂</p>
-                    <p class="text-gray-600">新竹市東區博愛街106號</p>
+                    <!-- Link applied to location name and address -->
+                    <a href="https://maps.app.goo.gl/xQnv7u4cVnSZLG5P9" target="_blank" class="location-link transition duration-300">
+                        <p class="text-lg font-medium text-gray-700 mb-2">綠水市民活動中心一樓禮堂</p>
+                        <p class="text-gray-600">新竹市東區博愛街106號</p>
+                    </a>
                     <p class="mt-4 text-sm text-gray-500">
-                        <!-- Placeholder for Map Description -->
                         (活動地點位於新竹市區，靠近新竹動物園及國立陽明交通大學博愛校區。建議多利用周邊停車場，如動物園地下停車場或體育館前停車場。)
                     </p>
                 </div>
 
-                <!-- Attire & Organizers Card -->
+                <!-- Attire & Organizers Card (Now including Theme promotional copy) -->
                 <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-rotaract-blue">
                     <h4 class="text-xl font-bold mb-3 text-rotaract-blue">活動資訊</h4>
+                    
                     <div class="mb-4">
                         <p class="text-lg font-medium mb-1">📌 服裝要求</p>
                         <!-- Attire text updated to Cranberry accent -->
                         <p class="text-gray-600 font-bold accent-text">地區區服</p>
                     </div>
+
+                    <!-- 活動主題：改為宣傳文案，讓內容更豐富 -->
                     <div>
-                        <p class="text-lg font-medium mb-1">🤝 承辦單位</p>
-                        <p class="text-gray-600">新竹西北扶青社 (主辦)</p>
-                        <p class="text-600 text-sm mt-1">協辦：新竹北區、聯合大學、中壢、新竹中央扶青社</p>
+                        <p class="text-sm text-gray-700">
+                            釋放你心中的熱情與創意！不論你是充滿活力的新生怪物，還是經驗豐富的地區大魔王，歡迎展現獨特的扶青精神，一同狂歡，創造屬於我們的怪奇之夜！
+                        </p>
                     </div>
                 </div>
             </div>
