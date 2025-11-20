@@ -38,6 +38,9 @@
         .border-rotaract-cranberry {
             border-color: var(--rotaract-cranberry);
         }
+        .bg-rotaract-cranberry {
+            background-color: var(--rotaract-cranberry);
+        }
         .bg-rotaract-cranberry-10 {
              /* Light background for menu/timing blocks */
             background-color: rgba(212, 19, 103, 0.1); 
@@ -58,6 +61,10 @@
     <!-- Header Section -->
     <header class="header-bg text-white py-12 md:py-20 shadow-xl">
         <div class="container mx-auto px-4 text-center">
+            <!-- 新增地區名稱小標題 -->
+            <p class="text-lg md:text-xl font-medium opacity-80 mb-2">
+                國際扶輪3501地區
+            </p>
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
                 地區尾牙感恩盛宴
             </h1>
@@ -85,11 +92,15 @@
         -->
     </section>
 
-    <!-- Event Purpose & Time -->
+    <!-- Event Purpose & Time (已將「活動宗旨」更名為「盛會緣起與扶青精神」) -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
-            <!-- Border updated to Cranberry -->
-            <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-rotaract-cranberry pb-2">活動宗旨</h3>
+            <!-- 新增小標題：District 3501 Rotaract Club，使用 Accent 顏色增添質感 -->
+            <p class="text-base font-medium accent-text opacity-90 text-center mb-1">
+                District 3501 Rotaract Club
+            </p>
+            <!-- 標題修改為「盛會緣起與扶青精神」 -->
+            <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">盛會緣起與扶青精神</h3>
             <p class="text-gray-700 text-lg leading-relaxed mb-8">
                 歲末年終，特別感謝這一年來全體扶青社員的辛勤付出與熱忱！本次地區尾牙活動，旨在提供一個輕鬆歡樂的場合，讓大家在美食、遊戲與歌唱中盡情放鬆，加深彼此情誼，同時凝聚地區的向心力，共同展望2025-26年的繁榮與綻放。
             </p>
@@ -157,7 +168,7 @@
         <div class="container mx-auto px-4 max-w-4xl">
             <!-- Border updated to Cranberry -->
             <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center border-b-2 border-rotaract-cranberry pb-2">
-                頂級辦桌饗宴 (意源廚房)
+                美食饗宴
             </h3>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
                 <!-- Menu Items background updated to Cranberry light background -->
@@ -184,37 +195,44 @@
                 報名費用與截止日期
             </h3>
 
-            <div class="overflow-x-auto mb-6">
-                <table class="w-full text-left bg-white rounded-xl shadow-lg">
-                    <thead class="bg-rotaract-blue text-white">
-                        <tr>
-                            <th class="py-3 px-4 rounded-tl-xl">對象</th>
-                            <th class="py-3 px-4">活動個人費用</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-3 px-4 font-medium text-rotaract-blue">3501地區扶青社員</td>
-                            <td class="py-3 px-4 text-xl font-bold text-red-600">NT$600/人</td>
-                        </tr>
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="py-3 px-4 font-medium text-gray-700">扶輪/扶青社友</td>
-                            <td class="py-3 px-4 font-bold">NT$700/人</td>
-                        </tr>
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-3 px-4 font-medium text-gray-700">來賓</td>
-                            <td class="py-3 px-4 font-bold">NT$800/人</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- 報名費用卡片 (取代了表格) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                <!-- Card 1: Main Target (Highlight in Cranberry) -->
+                <div class="p-6 rounded-xl shadow-xl bg-rotaract-cranberry text-white text-center transform hover:scale-[1.03] transition duration-300">
+                    <p class="text-lg font-semibold mb-1">3501地區扶青社員</p>
+                    <p class="text-4xl font-extrabold tracking-tight">NT$600</p>
+                    <p class="text-sm opacity-90">/ 人</p>
+                </div>
+                
+                <!-- Card 2: Rotarian/Other Rotaract (Rotary Blue Border) -->
+                <div class="p-6 rounded-xl shadow-xl bg-white border-2 border-rotaract-blue text-center transform hover:scale-[1.03] transition duration-300">
+                    <p class="text-lg font-semibold mb-1 text-rotaract-blue">扶輪/扶青社友</p>
+                    <p class="text-3xl font-extrabold tracking-tight text-gray-800">NT$700</p>
+                    <p class="text-sm text-gray-600">/ 人</p>
+                </div>
+                
+                <!-- Card 3: Guests (Neutral Border) -->
+                <div class="p-6 rounded-xl shadow-xl bg-white border-2 border-gray-300 text-center transform hover:scale-[1.03] transition duration-300">
+                    <p class="text-lg font-semibold mb-1 text-gray-700">來賓</p>
+                    <p class="text-3xl font-extrabold tracking-tight text-gray-800">NT$800</p>
+                    <p class="text-sm text-gray-600">/ 人</p>
+                </div>
             </div>
 
-            <div class="p-6 bg-red-100 border border-red-400 text-red-700 rounded-lg shadow-md">
-                <p class="font-bold mb-2">🗓️ 報名截止日：<span class="text-2xl font-extrabold">2026.01.10 (六)</span></p>
-                <p class="text-sm">⚠️ 活動費用牽涉預算考量，一旦報名繳費後，若臨時無法參與，恕無法進行退費。如需更換參與者，若對象別不同，需依照來賓費用補足價差。</p>
+            <!-- 截止日期框 (更醒目) -->
+            <div class="p-6 bg-red-600 text-white rounded-xl shadow-2xl mb-8 flex flex-col sm:flex-row items-center justify-between">
+                <p class="text-lg font-bold mb-2 sm:mb-0">🚨 報名及繳費截止日</p>
+                <p class="text-3xl font-extrabold tracking-wide">2026.01.10 (六)</p>
+            </div>
+
+
+            <!-- 注意事項 (取代原本的紅色框，改用左側邊線提醒) -->
+            <div class="p-4 bg-red-100 border-l-4 border-red-500 text-red-700 rounded-lg">
+                <p class="font-bold mb-1">⚠️ 注意事項</p>
+                <p class="text-sm">活動費用牽涉預算考量，一旦報名繳費後，若臨時無法參與，恕無法進行退費。如需更換參與者，若對象別不同，需依照來賓費用補足價差。</p>
             </div>
             
-            <!-- Button uses the new Cranberry color -->
+            <!-- Button uses the new Cranberry color (不變) -->
             <a href="https://forms.gle/4LWUTMngmEVCKD8s6" class="block w-full text-center mt-8 py-4 px-6 btn-primary rounded-xl font-bold text-xl shadow-lg uppercase" target="_blank">
                 點擊此處報名
             </a>
@@ -228,7 +246,7 @@
                     <img 
                         src="./images/Rotaract_UniteForGood.png" 
                         alt="扶青Logo" 
-                        class="w-full h-auto max-w-48 opacity-90 hover:opacity-100 transition duration-300"
+                        class="w-16 h-16 opacity-90 hover:opacity-100 transition duration-300"
                         onerror="this.onerror=null;this.src='https://placehold.co/64x64/ffffff/2A4A87?text=RI'"
                     >
                 </a>
